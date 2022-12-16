@@ -1,6 +1,25 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 8px;
+    background-image: url(img/banner-gffb17ce23_1920.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .content {
@@ -8,10 +27,11 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    background-color: rgb(0 0 0 / 5%);
 }
 
 .pokemon-cards {
-    height: 200px;
+    height: fit-content;
     width: 200px;
     border-radius: 20px;
     padding: 24px;
@@ -20,38 +40,45 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 40px;
-
+    border: 1px solid rgb(0 0 0 / 20%);
+    cursor: pointer;
+    gap: 8px;
 }
 
-.pokemon-cards img{
+.pokemon-cards:hover {
+    box-shadow: rgba(50 50 93 / 5%) 0px 30px 60px -12px inset, rgba(0 0 0 / 5%) 0px 18px 36px -18px inset;
+}
+
+.pokemon-cards img {
     width: 190px;
-    height:  190px;
+    height: 190px;
 }
 
-.img-div{
+.img-div {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
     background-color: rgb(0 0 0 / 20%);
     width: 100%;
-    border-radius: 11px;
+    border-radius: 20px;
+    height: 220px;
+    justify-content: center;
 }
 
-.name-div{
-    gap: 10px;
+.name-div {
+    gap: 8px;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.types{
+.types {
     display: flex;
     gap: 6px;
 }
 
-.type-div{
+.type-div {
     width: 48%;
     background-color: lightcoral;
     display: flex;
@@ -60,86 +87,242 @@ body {
     border-radius: 6px;
 }
 
-.id-nr{
-    font-size: 12px;
+.id-nr {
+    font-size: 13px;
     font-weight: 800;
     color: rgba(128, 128, 128, 0.727);
 }
 
-.name{
+.name {
     font-size: 24px;
     font-weight: 700;
     color: rgb(0 0 0 / 80%);
 }
 
-.normal{
-    background-color: rgb(188,189,175);
+.btn {
+    padding: 15px;
+    border: 0;
+    width: 200px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(27, 130, 177);
+    font-weight: 700;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    z-index: 2;
 }
 
-.poison{
-    background-color: rgb(164,91,159);
+.bg1 {
+    margin: 0px;
+    background-color: rgb(0 0 0 / 90%);
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(img/pexels-nothing-ahead-12024204.jpg); */
+    cursor: pointer;
 }
 
-.psychic{
-    background-color: rgb(245,96,177);
+.one-pokemon {
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    border-radius: 16px;
+    cursor: auto;
+    z-index: 5;
 }
 
-.grass{
-    background-color: rgb(136,210,79);
+.d-none {
+    display: none;
 }
 
-.ground{
-    background-color: rgb(239,202,88);
+
+
+.my-weakness {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
 }
 
-.ice{
-    background-color: rgb(149,241,255);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.normal {
+    background-color: rgb(188, 189, 175);
 }
 
-.fire{
-    background-color: rgb(250,85,66);
+.normal1:hover {
+    background-color: rgb(188 189 175 / 30%);
 }
 
-.rock{
-    background-color: rgb(206,188,114);
+.poison {
+    background-color: rgb(164, 91, 159);
 }
 
-.dragon{
-    background-color: rgb(132,115,254);
+.poison1:hover {
+    background-color: rgb(164 91 159 / 30%);
 }
 
-.water{
-    background-color: rgb(87,173,255);
+.psychic {
+    background-color: rgb(245, 96, 177);
 }
 
-.bug{
-    background-color: rgb(195,210,31);
+.psychic1:hover {
+    background-color: rgb(245 96 177 / 30%);
 }
 
-.dark{
-    background-color: rgb(138,103,83);
+.grass {
+    background-color: rgb(136, 210, 79);
 }
 
-.fighting{
-    background-color: rgb(169,85,65);
+.grass1:hover {
+    background-color: rgb(136 210 79 / 30%);
 }
 
-.ghost{
-    background-color: rgb(120,116,213);
+.ground {
+    background-color: rgb(239, 202, 88);
 }
 
-.steel{
-    background-color: rgb(195,194,217);
+.ground1:hover {
+    background-color: rgb(239 202 88 / 30%);
 }
 
-.flying{
-    background-color: rgb(120,164,251);
+.ice {
+    background-color: rgb(149, 241, 255);
 }
 
-.electric{
-    background-color: rgb(254,235,53);
+.ice1:hover {
+    background-color: rgb(149 241 255 / 30%);
 }
 
-.fairy{
-    background-color: rgb(251,173,255);
+.fire {
+    background-color: rgb(250, 85, 66);
+}
+
+.fire1:hover {
+    background-color: rgb(250 85 66 / 30%);
+}
+
+.rock {
+    background-color: rgb(206, 188, 114);
+}
+
+.rock1:hover {
+    background-color: rgb(206 188 114 / 30%);
+}
+
+.dragon {
+    background-color: rgb(132, 115, 254);
+}
+
+.dragon1:hover {
+    background-color: rgb(132 115 254 / 30%);
+}
+
+.water {
+    background-color: rgb(87, 173, 255);
+}
+
+.water1:hover {
+    background-color: rgb(87 173 255 / 30%);
+}
+
+.bug {
+    background-color: rgb(195, 210, 31);
+}
+
+.bug1:hover {
+    background-color: rgb(195 210 31 / 30%);
+}
+
+.dark {
+    background-color: rgb(138, 103, 83);
+}
+
+.dark1:hover {
+    background-color: rgb(138 103 83 / 30%);
+}
+
+.fighting {
+    background-color: rgb(169, 85, 65);
+}
+
+.fighting1:hover {
+    background-color: rgb(169 85 65 / 30%);
+}
+
+.ghost {
+    background-color: rgb(120, 116, 213);
+}
+
+.ghost1:hover {
+    background-color: rgb(120 116 213 / 30%);
+}
+
+.steel {
+    background-color: rgb(195, 194, 217);
+}
+
+.steel1:hover {
+    background-color: rgb(195 194 217 / 30%);
+}
+
+.flying {
+    background-color: rgb(120, 164, 251);
+}
+
+.flying1:hover {
+    background-color: rgb(120 164 251 / 30%);
+}
+
+.electric {
+    background-color: rgb(254, 235, 53);
+}
+
+.electric1:hover {
+    background-color: rgb(254 235 53 / 30%);
+}
+
+.fairy {
+    background-color: rgb(251, 173, 255);
+}
+
+.fairy1:hover {
+    background-color: rgb(251 173 255 / 30%);
 }

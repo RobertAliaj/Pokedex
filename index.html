@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="probe.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <script src="checkColors.js"></script>
+    <script src="probe.js"></script>
 </head>
+
 <body onload="loadPokemon()">
+
+    <nav>
+        <i>Pokedex</i>
+    </nav>
+
+    <div id="oneCardBg" class="bg1 d-none" onclick="closeCards()">
+        <div id="overlayContent" class="one-pokemon" onclick="event.stopPropagation()">
+        </div>
+    </div>
 
     <div id="showPokemons" class="content">
     </div>
-    
 
+    <button onclick="loadPokemon()" class="btn">Mehr Pokemon laden</button>
 
-    <button onclick="loadPokemon()">load some more</button>
 </body>
+
 </html>
