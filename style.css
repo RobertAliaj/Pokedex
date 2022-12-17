@@ -125,7 +125,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(img/pexels-nothing-ahead-12024204.jpg); */
     cursor: pointer;
 }
 
@@ -142,30 +141,186 @@ nav {
     display: none;
 }
 
-
-
-.my-weakness {
-    width: 10%;
+.overlay-bg {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 6px;
+    height: 100%;
+}
+
+.overlay-img {
+    width: 250px;
+}
+
+.overlay-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.description-div {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: rgb(48, 167, 215);
+    border-radius: 16px;
+    padding: 22px;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 
+.description {
+    text-align: center;
+    color: #E2DFD2;
+    font-size: 18px;
+    font-weight: 700;
+}
 
 
+.weakness-div {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
 
 
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 56%;
+    gap: 10px;
+}
 
 
+.my-weakness {
+    background-color: lightblue;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.overlay-content-parent {
+    height: 100%;
+}
+
+.overlay-img-div {
+    height: 56%;
+    background-color: rgb(188, 189, 175);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay-title {
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 22px;
+}
 
 
+.overlay-name {
+    color: rgb(0 0 0 / 80%);
+}
 
+.overlay-id {
+    color: rgba(128, 128, 128, 0.727);
+}
 
+.pokemon-data {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60%;
+}
 
+.height {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E2DFD2;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
 
+}
 
+.weight {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E2DFD2;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+
+}
+
+.abilities {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E2DFD2;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+
+}
+
+.habitat {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E2DFD2;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+
+}
+
+.move {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #E2DFD2;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.move-span{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    margin-left: 7px;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(226 223 210 / 90%);
+    border: 0;
+    border-radius: 10px;
+}
+
+.move-data, .habitat-data, .ability-data, .weight-data, .height-data{
+    color: black;
+}
 
 
 
