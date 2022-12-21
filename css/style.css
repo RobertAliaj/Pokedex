@@ -4,6 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-image: url(img/pk-bg.png);
+    background-size: cover; */
 }
 
 nav {
@@ -17,7 +19,7 @@ nav {
     font-weight: 800;
     color: white;
     letter-spacing: 8px;
-    background-image: url(img/banner-gffb17ce23_1920.jpg);
+    background-image: url(../img/banner-gffb17ce23_1920.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -26,8 +28,10 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     background-color: rgb(0 0 0 / 5%);
+    width: 100%;
+    height: 100%;
 }
 
 .pokemon-cards {
@@ -43,6 +47,10 @@ nav {
     border: 1px solid rgb(0 0 0 / 20%);
     cursor: pointer;
     gap: 8px;
+}
+
+.for-width {
+    width: 100%;
 }
 
 .pokemon-cards:hover {
@@ -74,13 +82,14 @@ nav {
 }
 
 .types {
+    width: 100%;
     display: flex;
     gap: 6px;
 }
 
 .type-div {
     width: 48%;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,10 +144,11 @@ nav {
     border-radius: 16px;
     cursor: auto;
     z-index: 5;
+    /* background-image: url(img/pokemon-g481d2d567_1920.jpg); */
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .overlay-bg {
@@ -198,7 +208,7 @@ nav {
 
 
 .my-weakness {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     width: 20%;
     display: flex;
     align-items: center;
@@ -208,6 +218,8 @@ nav {
 
 .overlay-content-parent {
     height: 100%;
+    width: 100%;
+
 }
 
 .overlay-img-div {
@@ -303,7 +315,7 @@ nav {
     font-weight: 700;
 }
 
-.move-span{
+.move-span {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
@@ -318,164 +330,110 @@ hr {
     border-radius: 10px;
 }
 
-.move-data, .habitat-data, .ability-data, .weight-data, .height-data{
+.move-data,
+.habitat-data,
+.ability-data,
+.weight-data,
+.height-data {
     color: black;
 }
 
+.arrows-div {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(188 189 175 / 40%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.arrows {
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+}
 
+.arrows:hover {
+    width: 45px;
+    height: 45px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.normal {
-    background-color: rgb(188, 189, 175);
+.btn-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 / 5%);
 }
 
 .normal1:hover {
     background-color: rgb(188 189 175 / 30%);
 }
 
-.poison {
-    background-color: rgb(164, 91, 159);
-}
-
 .poison1:hover {
     background-color: rgb(164 91 159 / 30%);
-}
-
-.psychic {
-    background-color: rgb(245, 96, 177);
 }
 
 .psychic1:hover {
     background-color: rgb(245 96 177 / 30%);
 }
 
-.grass {
-    background-color: rgb(136, 210, 79);
-}
-
 .grass1:hover {
     background-color: rgb(136 210 79 / 30%);
-}
-
-.ground {
-    background-color: rgb(239, 202, 88);
 }
 
 .ground1:hover {
     background-color: rgb(239 202 88 / 30%);
 }
 
-.ice {
-    background-color: rgb(149, 241, 255);
-}
-
 .ice1:hover {
     background-color: rgb(149 241 255 / 30%);
-}
-
-.fire {
-    background-color: rgb(250, 85, 66);
 }
 
 .fire1:hover {
     background-color: rgb(250 85 66 / 30%);
 }
 
-.rock {
-    background-color: rgb(206, 188, 114);
-}
-
 .rock1:hover {
     background-color: rgb(206 188 114 / 30%);
-}
-
-.dragon {
-    background-color: rgb(132, 115, 254);
 }
 
 .dragon1:hover {
     background-color: rgb(132 115 254 / 30%);
 }
 
-.water {
-    background-color: rgb(87, 173, 255);
-}
-
 .water1:hover {
     background-color: rgb(87 173 255 / 30%);
-}
-
-.bug {
-    background-color: rgb(195, 210, 31);
 }
 
 .bug1:hover {
     background-color: rgb(195 210 31 / 30%);
 }
 
-.dark {
-    background-color: rgb(138, 103, 83);
-}
-
 .dark1:hover {
     background-color: rgb(138 103 83 / 30%);
-}
-
-.fighting {
-    background-color: rgb(169, 85, 65);
 }
 
 .fighting1:hover {
     background-color: rgb(169 85 65 / 30%);
 }
 
-.ghost {
-    background-color: rgb(120, 116, 213);
-}
-
 .ghost1:hover {
     background-color: rgb(120 116 213 / 30%);
-}
-
-.steel {
-    background-color: rgb(195, 194, 217);
 }
 
 .steel1:hover {
     background-color: rgb(195 194 217 / 30%);
 }
 
-.flying {
-    background-color: rgb(120, 164, 251);
-}
-
 .flying1:hover {
     background-color: rgb(120 164 251 / 30%);
 }
 
-.electric {
-    background-color: rgb(254, 235, 53);
-}
-
 .electric1:hover {
     background-color: rgb(254 235 53 / 30%);
-}
-
-.fairy {
-    background-color: rgb(251, 173, 255);
 }
 
 .fairy1:hover {
