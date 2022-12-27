@@ -7,22 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="icon" type="image/gif" href="../img/pokemon-gedb38d611_1280.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.1/dist/chart.umd.min.js"></script>
 
 
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/probe.js"></script>
+    <script src="../js/script.js"></script>
     <script src="../js/template.js"></script>
-    <script src="../js/checkColors.js"></script>
+    <script src="../js/bgColors.js"></script>
+    <script src="../js/characteristics.js"></script>
 </head>
 
 <body onload="loadPokemon()">
 
-    <!-- <input type="text" id="searchInput" onkeydown="if (event.key === 'Enter') searchButtonClicked()"> -->
-    <!-- <button onclick="searchPokemon()">Search</button> -->
-    <input type="text" id="searchInput" onkeydown="searchButtonClicked()">
-
     <nav>
         <i>Pokedex</i>
+        <input type="search" id="searchInput" onkeyup="searchPokemon()" placeholder="Search Pokemon">
     </nav>
 
     <div id="oneCardBg" class="bg1 d-none" onclick="closeCards()">
@@ -36,6 +35,7 @@
     <div class="btn-div" id="btn">
         <button onclick="loadPokemon()" class="btn">Mehr Pokemon laden</button>
     </div>
+
 </body>
 
 </html>

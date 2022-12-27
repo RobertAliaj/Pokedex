@@ -4,24 +4,53 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url(img/pk-bg.png);
-    background-size: cover; */
+    background-image: url(../img/pokemon-g481d2d567_1920.jpg);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* background-size: 100vw ; */
+    background-image: cover
+    ;
+}
+
+/* .pkimg:hover{
+    scale: 1.2;
+} */
+
+input {
+    width: 20%;
+    height: 50%;
+    background-color: rgb(255 255 255 /100%);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:hover {
+    background-color: rgb(255 255 255 /95%);
 }
 
 nav {
     width: 100%;
     height: 60px;
-    background-color: grey;
+    /* background-color: grey; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 38px;
     font-weight: 800;
-    color: white;
+    /* color: white; */
     letter-spacing: 8px;
-    background-image: url(../img/banner-gffb17ce23_1920.jpg);
+    /* background-image: url(../img/banner-gffb17ce23_1920.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    gap: 40px;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    color: #FECA1B;
 }
 
 .content {
@@ -44,7 +73,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid rgb(0 0 0 / 20%);
+    /* border: 1px solid rgb(0 0 0 / 20%); */
+    border: 1px solid rgb(255 255 255 / 70%);
     cursor: pointer;
     gap: 8px;
 }
@@ -105,7 +135,8 @@ nav {
 .name {
     font-size: 24px;
     font-weight: 700;
-    color: rgb(0 0 0 / 80%);
+    /* color: rgb(0 0 0 / 80%); */
+    color: rgb(255 255 255 / 80%);
 }
 
 .btn {
@@ -121,6 +152,10 @@ nav {
     margin-bottom: 16px;
     cursor: pointer;
     z-index: 2;
+}
+
+.btn:hover {
+    background-color: rgb(10, 120, 171);
 }
 
 .bg1 {
@@ -144,7 +179,9 @@ nav {
     border-radius: 16px;
     cursor: auto;
     z-index: 5;
-    /* background-image: url(img/pokemon-g481d2d567_1920.jpg); */
+    background-image: url(../img/pokemon-g481d2d567_1920.jpg);
+    /* background-position: 600px 400px; */
+    background-position: 1000px -460px;
 }
 
 .d-none {
@@ -156,6 +193,7 @@ nav {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    justify-content: space-between;
 }
 
 .overlay-img {
@@ -172,9 +210,9 @@ nav {
 
 .description-div {
     display: flex;
-    height: 80%;
+    height: fit-content;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: rgb(48, 167, 215);
     border-radius: 16px;
     padding: 22px;
@@ -195,6 +233,8 @@ nav {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 
@@ -202,14 +242,12 @@ nav {
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 56%;
-    gap: 10px;
 }
 
 
 .my-weakness {
     /* background-color: lightblue; */
-    width: 20%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,14 +255,14 @@ nav {
 }
 
 .overlay-content-parent {
-    height: 100%;
+    height: 40%;
     width: 100%;
 
 }
 
 .overlay-img-div {
-    height: 56%;
-    background-color: rgb(188, 189, 175);
+    height: 90%;
+    /* background-color: rgb(188, 189, 175); */
     border-radius: 22px;
     display: flex;
     align-items: center;
@@ -238,17 +276,18 @@ nav {
 
 
 .overlay-name {
-    color: rgb(0 0 0 / 80%);
+    color: white;
+    font-size: 40px;
 }
 
 .overlay-id {
-    color: rgba(128, 128, 128, 0.727);
+    color: white;
+    font-size: 40px;
 }
 
 .pokemon-data {
     display: flex;
     flex-wrap: wrap;
-    height: 60%;
 }
 
 .height {
@@ -261,6 +300,9 @@ nav {
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    height: fit-content;
+    margin-bottom: 15px;
+
 
 }
 
@@ -274,6 +316,9 @@ nav {
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    height: fit-content;
+    margin-bottom: 15px;
+
 
 }
 
@@ -287,6 +332,7 @@ nav {
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    height: fit-content;
 
 }
 
@@ -300,27 +346,25 @@ nav {
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    height: fit-content;
+    margin-bottom: 15px;
+
 
 }
 
 .move {
-    width: 40%;
+    width: 32%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
     color: #E2DFD2;
     display: flex;
     flex-direction: column;
     font-weight: 700;
+    height: fit-content;
+
 }
 
-.move-span {
-    display: flex;
-    width: 40%;
-    justify-content: space-evenly;
-    margin-left: 7px;
-}
 
 hr {
     width: 100%;
@@ -360,7 +404,7 @@ hr {
     height: 45px;
 }
 
-.btn-div{
+.btn-div {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -438,4 +482,50 @@ hr {
 
 .fairy1:hover {
     background-color: rgb(251 173 255 / 30%);
+}
+
+.beide {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 36%;
+    margin-bottom: 12px;
+}
+
+.canvas-div {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    border-radius: 22px;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.canvas {
+    display: block;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+.weakness-parent {
+    width: 250px;
+    height: 100%;
+    color: white;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 30px;
+}
+
+.weakness-parent span {
+    font-size: 25px;
 }

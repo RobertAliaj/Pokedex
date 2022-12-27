@@ -22,8 +22,15 @@ function renderCardsHtml(onePokemon, i) {
     `;
 }
 
-function renderOverlayHtml(overlayPokemonId, i, overlayPokemonImg, myDescription, habitat) {
-    return`
+
+function renderOverlayHtml(
+    overlayPokemonId,
+    i,
+    overlayPokemonImg,
+    myDescription,
+    habitat
+) {
+    return `
 
 <div class="overlay-bg">
    
@@ -80,16 +87,29 @@ function renderOverlayHtml(overlayPokemonId, i, overlayPokemonImg, myDescription
 
                     
                     </div>    
-                    <div id="weakness" class="weakness-div">
+
                     </div>
-            </div>
+                    
+                                        <div id="overlayArrow" class="arrows-div" onclick="nextCard(${i})">
+                                                <img src="../img/right-arrow.png" class="arrows" >
+                                        </div>
             
-            <div id="overlayArrow" class="arrows-div" onclick="nextCard(${i})">
-                    <img src="../img/right-arrow.png" class="arrows" >
-            </div>
 
         </div>
-    </div>
+        </div>    
+        
+        <div class="beide">
+        <div class="weakness-parent">
+        <span>Weakness</span>
+            <div id="weakness" class="weakness-div">
+            </div>
+        </div>
+            <div class="canvas-div">
+            <span>Superpowers</span>
+                <canvas id="chart" class="canvas"><canvas>
+            </div>
+        </div>
+
 </div>
 `;
 }
