@@ -77,7 +77,26 @@ const CONFIG_CHART_OPTIONS = {
     scales: {
         y: {
             beginAtZero: true
+        },
+        x: {
+            ticks: {
+                font: {
+                    size: 12,
+                    weight: 100
+                },
+                color: 'rgb(255, 255, 255)'
+            }
+        },
+        // x: {
+        //     ticks: {
+        //         color: 'rgb(255, 255, 255)'
+        //     }
+        // }
+    },
+    plugins: {
+        legend: {
+            display: false,
         }
     }
-}; 
+};
 

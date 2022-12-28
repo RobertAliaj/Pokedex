@@ -43,7 +43,7 @@ function renderCards() {
 function renderImgDivBg(onePokemon, i) {
     let myPicture = `<img src="${onePokemon['sprites']['other']['official-artwork']['front_default']}" class="pkimg">`;
     let myTypes = loadedPokemons[i]['types'][0]['type']['name'];
-    document.getElementById(`probe${i}`).innerHTML += ` <div id="imgDiv${i}" class="img-div">${myPicture}</div>`;
+    document.getElementById(`imgParent${i}`).innerHTML += ` <div id="imgDiv${i}" class="img-div">${myPicture}</div>`;
     document.getElementById(`imgDiv${i}`).style.backgroundColor = setColors(myTypes);
 }
 
@@ -92,18 +92,20 @@ function drawPokemonChart(i) {
         statsName.push(myStats['stat']['name'].toUpperCase());
         statsPower.push(myStats['base_stat']);
     }
-    drawMyChart(statsName, statsPower);
+
+    let names = ['H-Points','Attack','Defense','Sp-Attack','Sp-Defense','Speed'];
+    drawMyChart(statsName, statsPower, names);
 }
 
 
-function drawMyChart(statsName, statsPower) {
+function drawMyChart(statsName, statsPower, names) {
     const ctx = document.getElementById(`chart`).getContext('2d');
 
     myChart = new Chart(ctx, {
         type: 'bar',
 
         data: {
-            labels: statsName,
+            labels: names,
             datasets: [{
                 label: 'Amount Of Power',
                 data: statsPower,
@@ -163,15 +165,18 @@ function searchPokemon() {
     }
 }
 
+
 //open the Overlay 
 function openOneCard() {
     document.getElementById(`oneCardBg`).classList.remove('d-none');
+    document.getElementById('body').classList.add('disable-scrollbar');
 }
 
 
 // close the Overlay
 function closeCards() {
     document.getElementById(`oneCardBg`).classList.add('d-none');
+    document.getElementById('body').classList.remove('disable-scrollbar');
 }
 
 

@@ -11,17 +11,18 @@
 
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <script src="../js/script.js"></script>
     <script src="../js/template.js"></script>
     <script src="../js/bgColors.js"></script>
     <script src="../js/characteristics.js"></script>
 </head>
 
-<body onload="loadPokemon()">
+<body onload="loadPokemon()" id="body">
 
     <nav>
         <i>Pokedex</i>
-        <input type="search" id="searchInput" onkeyup="searchPokemon()" placeholder="Search Pokemon">
+        <input type="text" id="searchInput" onkeyup="searchPokemon()" placeholder="Search Pokemon">
     </nav>
 
     <div id="oneCardBg" class="bg1 d-none" onclick="closeCards()">
@@ -35,6 +36,7 @@
     <div class="btn-div" id="btn">
         <button onclick="loadPokemon()" class="btn">Mehr Pokemon laden</button>
     </div>
+
 
 </body>
 

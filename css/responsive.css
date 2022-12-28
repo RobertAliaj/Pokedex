@@ -1,0 +1,255 @@
+@media(max-width: 500px) {
+    .pokemon-cards {
+        width: 62%;
+    }
+
+    .img-parent {
+        width: 100%;
+    }
+
+    .pokemon-cards img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media(max-width: 760px) {
+    .overlay-name {
+        font-size: 22px;
+    }
+
+    .overlay-id {
+        font-size: 22px;
+    }
+
+    .x {
+        width: 20px;
+        height: 20px;
+    }
+
+    .overlay-img {
+        width: 180px;
+    }
+
+    .move {
+        font-size: 14px;
+
+    }
+
+    .height {
+        font-size: 14px;
+    }
+
+    .abilitty {
+
+        font-size: 14px;
+    }
+
+    .habitat {
+
+        font-size: 14px;
+    }
+
+    .weight {
+
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .weakness-parent span {
+        font-size: 20px;
+    }
+
+    .weakness-parent {
+        font-size: 15px;
+    }
+
+    .description-div {
+        padding: 0px;
+    }
+
+    .one-pokemon {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .weakness-parent {
+        height: 70%;
+        padding-top: 42px;
+    }
+}
+
+@media(max-width: 600px) {
+    .overlay-content {
+        flex-direction: column;
+        height: fit-content;
+        gap: 0px;
+    }
+
+    .overlay-content-parent {
+        height: fit-content;
+    }
+
+    hr{
+        width: 90%;
+    }
+
+    .description-div {
+        background-color: unset;
+    }
+
+    .move-data,
+    .habitat-data,
+    .ability-data,
+    .weight-data,
+    .height-data {
+        color: white;
+        font-size: 14px;
+    }
+
+    .height {
+        align-items: unset;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: unset;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 100%;
+    }
+
+    .move {
+        align-items: unset;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: unset;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 100%;
+    }
+
+    .habitat {
+        align-items: unset;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: unset;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 100%;
+    }
+
+    .abilities {
+        align-items: unset;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: unset;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .weight {
+        align-items: unset;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: unset;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .pokemon-data {
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        width: 100% !important;
+        padding-left: 80px;
+        box-sizing: border-box;
+        padding-right: 80px;
+    }
+
+    .chart-weakness {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .weakness-parent {
+        width: 100%;
+        padding-top: 6px;
+        gap: 15px;
+        height: fit-content;
+    }
+
+    .weakness-div {
+        flex-wrap: wrap-reverse;
+    }
+
+    .canvas-div {
+        width: 100%;
+    }
+
+    /* .overlay-bg {
+        justify-content: unset;
+    } */
+
+    .overlay-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .my-weakness {
+        width: 28%;
+    }
+
+    .description {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .overlay-title {
+        /* padding-top: 0px; */
+        box-sizing: border-box;
+        padding-top: 25px;
+    }
+
+    .one-pokemon {
+        /* background-position: 910px -404px; */
+        background-position: 854px -319px;
+    }
+
+    /* .right-arrow {
+        top: 36%;
+    }
+
+    .left-arrow {
+        top: 36%;
+    } */
+}
+
+@media(max-width: 470px) {
+    /* .right-arrow {
+        top: 45%;
+    }
+
+    .left-arrow {
+        top: 45%;
+    } */
+    
+    hr{
+        width: 100%;
+    }
+}

@@ -4,18 +4,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../img/pokemon-g481d2d567_1920.jpg);
-    background-size: contain;
-    /* background-repeat: no-repeat; */
+    background-image: url(../img/bg.jpg);
+    /* background-size: contain; */
     background-attachment: fixed;
-    /* background-size: 100vw ; */
-    background-image: cover
-    ;
+    /* background-image: cover; */
+    background-position: 1650px 4701px;
+
+    /* background-image: url(../img/bg.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-image: cover; */
 }
 
-/* .pkimg:hover{
+.x {
+    position: absolute;
+    top: 28px;
+    right: 13px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.x:hover {
     scale: 1.2;
-} */
+}
+
+
+.disable-scrollbar {
+    overflow: hidden;
+}
+
 
 input {
     width: 20%;
@@ -37,17 +56,12 @@ input:hover {
 nav {
     width: 100%;
     height: 60px;
-    /* background-color: grey; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 38px;
     font-weight: 800;
-    /* color: white; */
     letter-spacing: 8px;
-    /* background-image: url(../img/banner-gffb17ce23_1920.jpg);
-    background-size: cover;
-    background-position: center; */
     gap: 40px;
     text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
     color: #FECA1B;
@@ -57,8 +71,6 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* align-items: center; */
-    background-color: rgb(0 0 0 / 5%);
     width: 100%;
     height: 100%;
 }
@@ -182,6 +194,7 @@ nav {
     background-image: url(../img/pokemon-g481d2d567_1920.jpg);
     /* background-position: 600px 400px; */
     background-position: 1000px -460px;
+    position: relative;
 }
 
 .d-none {
@@ -205,27 +218,26 @@ nav {
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 .description-div {
-    display: flex;
-    height: fit-content;
-    width: 100%;
-    justify-content: center;
-    background-color: rgb(48, 167, 215);
     border-radius: 16px;
-    padding: 22px;
+    /* padding: 22px; */
     box-sizing: border-box;
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
 .description {
     text-align: center;
-    color: #E2DFD2;
-    font-size: 18px;
+    color: white;
     font-weight: 700;
+    width: 60%;
+
 }
 
 
@@ -241,7 +253,7 @@ nav {
 .right {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
 }
 
 
@@ -261,15 +273,10 @@ nav {
 }
 
 .overlay-img-div {
-    height: 90%;
-    /* background-color: rgb(188, 189, 175); */
-    border-radius: 22px;
     display: flex;
-    align-items: center;
 }
 
 .overlay-title {
-    font-size: 28px;
     font-weight: 700;
     padding-top: 22px;
 }
@@ -287,89 +294,61 @@ nav {
 
 .pokemon-data {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 58%;
 }
 
 .height {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 6px;
-    color: #E2DFD2;
+    color: white;
     display: flex;
-    flex-direction: column;
     font-weight: 700;
-    height: fit-content;
-    margin-bottom: 15px;
-
+    margin-bottom: 5px;
 
 }
 
 .weight {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 6px;
-    color: #E2DFD2;
+    color: white;
     display: flex;
-    flex-direction: column;
     font-weight: 700;
-    height: fit-content;
-    margin-bottom: 15px;
-
+    margin-bottom: 5px;
 
 }
 
 .abilities {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 6px;
-    color: #E2DFD2;
+    color: white;
     display: flex;
-    flex-direction: column;
     font-weight: 700;
-    height: fit-content;
-
+    margin-bottom: 5px;
 }
 
 .habitat {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 6px;
-    color: #E2DFD2;
+    color: white;
     display: flex;
-    flex-direction: column;
     font-weight: 700;
-    height: fit-content;
-    margin-bottom: 15px;
-
+    margin-bottom: 5px;
 
 }
 
 .move {
-    width: 32%;
+    justify-content: space-between;
+    color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #E2DFD2;
-    display: flex;
-    flex-direction: column;
     font-weight: 700;
-    height: fit-content;
-
 }
 
 
 hr {
-    width: 100%;
+    width: 60%;
     height: 2px;
-    background-color: rgb(226 223 210 / 90%);
+    background-color: white;
     border: 0;
     border-radius: 10px;
 }
@@ -379,19 +358,33 @@ hr {
 .ability-data,
 .weight-data,
 .height-data {
-    color: black;
+    color: white;
 }
 
 .arrows-div {
     width: 45px;
     height: 45px;
-    background-color: rgb(188 189 175 / 40%);
+    background-color: white;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+
+
+.left-arrow {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+}
+
 
 .arrows {
     width: 39px;
@@ -484,11 +477,11 @@ hr {
     background-color: rgb(251 173 255 / 30%);
 }
 
-.beide {
+.chart-weakness {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
+    width: 85%;
     height: 36%;
     margin-bottom: 12px;
 }
@@ -498,7 +491,6 @@ hr {
     width: 60%;
     display: flex;
     border-radius: 22px;
-    flex-direction: column;
     color: white;
     justify-content: center;
     align-items: center;

@@ -2,7 +2,7 @@ function renderCardsHtml(onePokemon, i) {
     return `
         <div id="pokemonCards${i}" class="pokemon-cards" onclick="openOneCard(); showDescription(${i})"> 
     
-            <div id="probe${i}">
+            <div id="imgParent${i}" class="img-parent">
             </div>
     
             <div class="for-width">
@@ -43,13 +43,13 @@ function renderOverlayHtml(
     <div class="overlay-content-parent">
 
         <div class="overlay-content">
-            <div class="arrows-div" onclick="previousCard(${i})">
+        <img src="../img/buchstabe-x.png" class="x" onclick="closeCards()">
+
+            <div class="arrows-div left-arrow" onclick="previousCard(${i})">
                 <img src="../img/left.png" class="arrows">
             </div>
         
-            <div class="overlay-img-div">                
                     <img class="overlay-img" src= ${overlayPokemonImg}>
-            </div>
 
             <div class="right">
                 <div class="description-div">
@@ -60,27 +60,27 @@ function renderOverlayHtml(
                     <hr>
                     <div class="pokemon-data">
                         <div class="height">
-                            <span > Height</span>
+                            <span > Height: </span>
                             <span id="height" class="height-data"></span>
                         </div>
                     
                         <div class="weight">
-                            <span> Weight</span>
+                            <span> Weight: </span>
                             <span id="weight" class="weight-data"></span>
                         </div>
                     
                         <div class="habitat">
-                            <span> Habitat</span>
+                            <span> Habitat: </span>
                             <span class="habitat-data">${habitat}</span>
                         </div>
                     
                         <div class="abilities">
-                            <span> Abilities</span>
+                            <span> Abilities: </span>
                             <span id="ability" class="ability-data"></span>
                         </div>
                     
                         <div class="move">
-                            <span class="move-span"> Move <img src="../img/lighting.png"></span>
+                            <span class="move-span"> Move: </span>
                             <span id="move" class="move-data"></span>
                         </div>
                     </div>
@@ -90,22 +90,21 @@ function renderOverlayHtml(
 
                     </div>
                     
-                                        <div id="overlayArrow" class="arrows-div" onclick="nextCard(${i})">
-                                                <img src="../img/right-arrow.png" class="arrows" >
-                                        </div>
+            <div id="overlayArrow" class="arrows-div right-arrow" onclick="nextCard(${i})">
+                    <img src="../img/right-arrow.png" class="arrows" >
+            </div>
             
 
         </div>
         </div>    
         
-        <div class="beide">
+        <div class="chart-weakness">
         <div class="weakness-parent">
         <span>Weakness</span>
             <div id="weakness" class="weakness-div">
             </div>
         </div>
             <div class="canvas-div">
-            <span>Superpowers</span>
                 <canvas id="chart" class="canvas"><canvas>
             </div>
         </div>
