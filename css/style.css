@@ -5,15 +5,8 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url(../img/bg.jpg);
-    /* background-size: contain; */
     background-attachment: fixed;
-    /* background-image: cover; */
     background-position: 1650px 4701px;
-
-    /* background-image: url(../img/bg.jpg);
-    background-size: contain;
-    background-attachment: fixed;
-    background-image: cover; */
 }
 
 .x {
@@ -30,19 +23,14 @@ body {
     scale: 1.2;
 }
 
-
-.disable-scrollbar {
-    overflow: hidden;
-}
-
-
 input {
     width: 20%;
     height: 50%;
-    background-color: rgb(255 255 255 /100%);
     border-radius: 10px;
     border: none;
     text-align: center;
+    background-color: unset;
+    border: 1px solid rgb(255 255 255 / 80%);
 }
 
 input:focus {
@@ -50,7 +38,7 @@ input:focus {
 }
 
 input:hover {
-    background-color: rgb(255 255 255 /95%);
+    background-color: rgb(255 255 255 / 10%);
 }
 
 nav {
@@ -63,8 +51,10 @@ nav {
     font-weight: 800;
     letter-spacing: 8px;
     gap: 40px;
+    background-color: rgb(0 0 0 / 80%);
     text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
     color: #FECA1B;
+    position: fixed;
 }
 
 .content {
@@ -73,6 +63,7 @@ nav {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    margin-top: 65px;
 }
 
 .pokemon-cards {
@@ -85,7 +76,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* border: 1px solid rgb(0 0 0 / 20%); */
     border: 1px solid rgb(255 255 255 / 70%);
     cursor: pointer;
     gap: 8px;
@@ -131,7 +121,6 @@ nav {
 
 .type-div {
     width: 48%;
-    /* background-color: lightcoral; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +136,6 @@ nav {
 .name {
     font-size: 24px;
     font-weight: 700;
-    /* color: rgb(0 0 0 / 80%); */
     color: rgb(255 255 255 / 80%);
 }
 
@@ -173,11 +161,9 @@ nav {
 .bg1 {
     margin: 0px;
     background-color: rgb(0 0 0 / 90%);
-    z-index: 999;
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,16 +171,13 @@ nav {
 }
 
 .one-pokemon {
-    width: 95%;
-    height: 90%;
-    background-color: white;
-    border-radius: 16px;
+    width: 100%;
+    height: 100%;
     cursor: auto;
-    z-index: 5;
     background-image: url(../img/pokemon-g481d2d567_1920.jpg);
-    /* background-position: 600px 400px; */
     background-position: 1000px -460px;
     position: relative;
+    background-color: white;
 }
 
 .d-none {
@@ -224,7 +207,6 @@ nav {
 
 .description-div {
     border-radius: 16px;
-    /* padding: 22px; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -258,7 +240,6 @@ nav {
 
 
 .my-weakness {
-    /* background-color: lightblue; */
     width: 40%;
     display: flex;
     align-items: center;

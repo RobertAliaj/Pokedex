@@ -74,7 +74,7 @@
 
     .one-pokemon {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         border-radius: 0px;
     }
 
@@ -88,15 +88,21 @@
     .overlay-content {
         flex-direction: column;
         height: fit-content;
-        gap: 0px;
+        gap: 14px;
     }
 
     .overlay-content-parent {
-        height: fit-content;
+        height: 60%;
     }
 
-    hr{
+    hr {
         width: 90%;
+        height: 0.5px;
+    }
+
+
+    .x {
+        top: 5px;
     }
 
     .description-div {
@@ -173,7 +179,6 @@
     }
 
     .pokemon-data {
-        flex-direction: column;
         align-items: center;
         flex-direction: column;
         width: 100% !important;
@@ -185,6 +190,7 @@
     .chart-weakness {
         flex-direction: column-reverse;
         width: 100%;
+        height: fit-content;
     }
 
     .weakness-parent {
@@ -202,13 +208,15 @@
         width: 100%;
     }
 
-    /* .overlay-bg {
-        justify-content: unset;
-    } */
+    .overlay-bg {
+        overflow-y: auto;
+        gap: 20px;
+        height: 100vh;
+    }
 
     .overlay-img {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .my-weakness {
@@ -221,35 +229,36 @@
     }
 
     .overlay-title {
-        /* padding-top: 0px; */
+        padding-top: 0px;
         box-sizing: border-box;
-        padding-top: 25px;
     }
 
     .one-pokemon {
-        /* background-position: 910px -404px; */
         background-position: 854px -319px;
     }
 
-    /* .right-arrow {
-        top: 36%;
+    nav {
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
     }
 
-    .left-arrow {
-        top: 36%;
-    } */
+    .content {
+        margin-top: 90px;
+    }
+
+    input {
+        width: unset;
+        height: 30px;
+        width: 40%;
+        background-color: unset;
+        border: 1px solid rgb(255 255 255 / 80%);
+        margin-bottom: 10px;
+    }
 }
 
 @media(max-width: 470px) {
-    /* .right-arrow {
-        top: 45%;
-    }
-
-    .left-arrow {
-        top: 45%;
-    } */
-    
-    hr{
-        width: 100%;
+    hr {
+        width: 90%;
     }
 }

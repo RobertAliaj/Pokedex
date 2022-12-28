@@ -5,7 +5,6 @@ let start = 1;
 let limit = 21;
 
 let myChart;
-
 let filterFunction = false;
 
 //fetch the Pokedex Api
@@ -13,7 +12,7 @@ async function loadPokemon() {
     for (let i = start; i < limit; i++) {                                     // starte bei eins und höre auf bei 19
         let url = `https://pokeapi.co/api/v2/pokemon/${i}/`;                  // hole die einzelnen Api-s(durch die i Variable wir die Url jedes mal geändert und dadurch wird ein neues Pokemon geladen)
         let response = await fetch(url);                                      // lade die Api-s herunter
-        let currentPokemon = await response.json();                               // wandle das ganze in ein neues Array um
+        let currentPokemon = await response.json();                           // wandle das ganze in ein neues Array um
         fetchedPokemons.push(currentPokemon);                                  // push das ganze in ein neues Array rein(loadedPokemons)
     }
     start += 20;                                                              // erhöhe den Wert um 20 wenn die Schleife zum zweiten mal durchläuft 
@@ -36,7 +35,6 @@ function renderCards() {
 
 
 }
-
 
 
 //add a different bg-color depending on what type the pokemon is
@@ -79,6 +77,8 @@ async function renderOverlay(myDescription, i, habitat) {
     let overlayPokemonId = loadedPokemons[i]['id'];
     content.innerHTML = renderOverlayHtml(overlayPokemonId, i, overlayPokemonImg, myDescription, habitat);
     drawPokemonChart(i);
+    displayLeftArrow(i);
+
 }
 
 
@@ -93,7 +93,7 @@ function drawPokemonChart(i) {
         statsPower.push(myStats['base_stat']);
     }
 
-    let names = ['H-Points','Attack','Defense','Sp-Attack','Sp-Defense','Speed'];
+    let names = ['H-Points', 'Attack', 'Defense', 'Sp-Attack', 'Sp-Defense', 'Speed'];
     drawMyChart(statsName, statsPower, names);
 }
 
@@ -122,21 +122,31 @@ function drawMyChart(statsName, statsPower, names) {
 //show next Pokemon in the normal Array
 function nextCard(i) {
     if (filterFunction) {                        // WENN die searchPokemon funktion aufgerufen wurde, wurde ein neues gefiltertes Array erstellt
-        if (i == loadedPokemons.length - 1) {    // wenn ich am ende von diesem neuen gefilterten array gelange 
-            return;                              // gib return zurück
-        } else {                                 // ansonsten
-            i++;                                 // iteriere durch das neue gefilterte Array
-            showDescription(i);                  // und zeige jeweils die overlaycards
-        }
+        nextFilteredPokemon(i);
     } else {                                     // ANSONSTEN wenn die searchpokemon nicht aufgerufen wurde, somit auch kein neues Array erstellt wurde
-        if (i == loadedPokemons.length - 1) {    // wenn ich am ende von dem normalen Array wo alle pokemons drin sind
-            loadPokemon();                       // lade 20 weitere Pokemons herunter 
-            i++;                                 // iteriere weiter durch das normale array 
-            showDescription(i);                  // zeige das ganze an
-        } else {                                 // ansonsten 
-            i++                                  // iteriere einfach weiter
-            showDescription(i)                   // zeige das ganze an 
-        }
+        nextPokemon(i);
+    }
+}
+
+
+function nextFilteredPokemon(i) {
+    if (i == loadedPokemons.length - 1) {    // wenn ich am ende von diesem neuen gefilterten array gelange 
+        return;                              // gib return zurück
+    } else {                                 // ansonsten
+        i++;                                 // iteriere durch das neue gefilterte Array
+        showDescription(i);                  // und zeige jeweils die overlaycards
+    }
+}
+
+
+function nextPokemon(i) {
+    if (i == loadedPokemons.length - 1) {    // wenn ich am ende von dem normalen Array wo alle pokemons drin sind
+        loadPokemon();                       // lade 20 weitere Pokemons herunter 
+        showDescription(i);                  // zeige das ganze an
+        i++;                                 // iteriere weiter durch das normale array 
+    } else {                                 // ansonsten 
+        i++                                  // iteriere einfach weiter
+        showDescription(i)                   // zeige das ganze an 
     }
 }
 
@@ -169,14 +179,16 @@ function searchPokemon() {
 //open the Overlay 
 function openOneCard() {
     document.getElementById(`oneCardBg`).classList.remove('d-none');
-    document.getElementById('body').classList.add('disable-scrollbar');
+    document.getElementById('showPokemons').classList.add('d-none');
+    document.getElementById('btn').classList.add('d-none');
 }
 
 
 // close the Overlay
 function closeCards() {
     document.getElementById(`oneCardBg`).classList.add('d-none');
-    document.getElementById('body').classList.remove('disable-scrollbar');
+    document.getElementById('showPokemons').classList.remove('d-none');
+    document.getElementById('btn').classList.remove('d-none');
 }
 
 
@@ -200,3 +212,20 @@ function resetPokemons() {
 }
 
 
+// Disable den Button für 2 sekunden nach dem es geklickt wurde, verhindere das er mehrmals geklickt wird
+function disableButton() {
+    let btn = document.getElementById("myButton");
+    btn.disabled = true;
+    setTimeout(function () {
+        btn.disabled = false;
+        rightArrow.disabled = false;
+    }, 2000);
+}
+
+
+//show left arrow if i = second Pokemon or higher
+function displayLeftArrow(i) {
+    if (i >= 1) {
+        document.getElementById('arrowDiv').classList.remove('d-none');
+    }
+}

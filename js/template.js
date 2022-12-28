@@ -45,7 +45,7 @@ function renderOverlayHtml(
         <div class="overlay-content">
         <img src="../img/buchstabe-x.png" class="x" onclick="closeCards()">
 
-            <div class="arrows-div left-arrow" onclick="previousCard(${i})">
+            <div class="arrows-div left-arrow d-none" onclick="previousCard(${i})" id="arrowDiv">
                 <img src="../img/left.png" class="arrows">
             </div>
         
@@ -100,13 +100,14 @@ function renderOverlayHtml(
         
         <div class="chart-weakness">
         <div class="weakness-parent">
+        <hr>
         <span>Weakness</span>
-            <div id="weakness" class="weakness-div">
-            </div>
+        <div id="weakness" class="weakness-div">
         </div>
-            <div class="canvas-div">
-                <canvas id="chart" class="canvas"><canvas>
-            </div>
+        </div>
+        <div class="canvas-div">
+        <canvas id="chart" class="canvas"><canvas>
+        </div>
         </div>
 
 </div>
