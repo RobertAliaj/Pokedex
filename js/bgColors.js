@@ -63,6 +63,7 @@ const CONFI_BG_COLORS = [
     'rgb(255 191 0 / 80%)'
 ];
 
+
 const CONFIG_BORDER = [
     'rgb(0 0 0)',
     'rgb(0 0 0)',
@@ -86,12 +87,7 @@ const CONFIG_CHART_OPTIONS = {
                 },
                 color: 'rgb(255, 255, 255)'
             }
-        },
-        // x: {
-        //     ticks: {
-        //         color: 'rgb(255, 255, 255)'
-        //     }
-        // }
+        }
     },
     plugins: {
         legend: {
